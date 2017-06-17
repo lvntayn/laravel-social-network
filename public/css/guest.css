@@ -1,0 +1,455 @@
+body{
+    background: url('../images/guest_bg.jpg');
+    font-family: 'Open Sans', sans-serif;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+:-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder, ::-ms-input-placeholder ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #4d4d4d;
+    font-style: italic;
+}
+
+.container{
+    margin-top: 120px;
+}
+
+.logo {
+    display: block;
+    margin: 150px auto 0 auto;
+    text-align: center;
+    width: 350px;
+}
+
+.tab_container {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+.tab_container .radio_hidden, section {
+    clear: both;
+    padding-top: 10px;
+    display: none;
+}
+
+.tab_container .head {
+    font-weight: 700;
+    font-size: 20px;
+    display: block;
+    float: left;
+    width: 50%;
+    padding: 22px 0;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    background: rgba(59, 105, 145, 0.8);
+}
+
+.tab_container label{
+    margin-bottom: 0;
+}
+
+
+.tab_container .tab-content {
+}
+
+#tab1:checked ~ .contents #content1,
+#tab2:checked ~ .contents #content2,
+#tab3:checked ~ .contents #content3,
+#tab4:checked ~ .contents #content4,
+#tab5:checked ~ .contents #content5 {
+    display: block;
+    padding: 20px 35px 50px 35px;
+    background: #fff;
+    color: #999;
+    box-sizing: border-box;
+}
+
+
+.tab_container [id^="tab"]:checked + .head, .tab_container .head:hover {
+    background: rgba(11, 75, 134, 0.8);
+}
+
+
+.tab_container .head .fa {
+    font-size: 1.3em;
+    margin: 0 20px 0 0;
+}
+
+
+
+.tab_container section h2 {
+    color: #292929;
+    font-size: 22px;
+    padding: 0;
+    margin: 15px 0 30px 0;
+    text-align: center;
+
+}
+
+.tab_container .form-group{
+    margin-bottom: 20px;
+}
+
+.tab_container .register .form-group{
+    margin-bottom: 10px;
+}
+
+.tab_container .form-group .control-label{
+    color: #292929;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.tab_container .form-group .form-control{
+    color: #333;
+    padding: 25px 30px 25px 20px;
+    border-radius: 0;
+    border-left: none;
+    background: #fff;
+    -webkit-box-shadow: 0;
+    -moz-box-shadow: 0;
+    box-shadow: 0;
+}
+
+.tab_container .input-group-addon{
+    background: #fff;
+    border-right: none;
+    border-radius: 0;
+}
+
+.tab_container .checkbox{
+    color: #292929;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+
+.banner{
+    background: rgba(59, 143, 145, 0.5);
+    color: #fff;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    position: fixed;
+    width: 100%;
+    top: 40%;
+}
+
+.banner .container{
+    margin-top: 0;
+    font-size: 18px;
+    padding: 0;
+}
+
+.footer{
+    color: #fff;
+    margin-top: 98px;
+    border-top: 1px solid #fff;
+}
+.footer a{
+    color: #fff;
+}
+
+.checkbox {
+    padding-left: 20px; }
+.checkbox label {
+    display: inline-block;
+    position: relative;
+    padding-left: 5px; }
+.checkbox label::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: 0;
+    margin-left: -20px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background-color: #fff;
+    -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+    -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+    transition: border 0.15s ease-in-out, color 0.15s ease-in-out; }
+.checkbox label::after {
+    display: inline-block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: 0;
+    margin-left: -20px;
+    padding-left: 3px;
+    padding-top: 1px;
+    font-size: 11px;
+    color: #555555; }
+.checkbox input[type="checkbox"] {
+    opacity: 0; }
+.checkbox input[type="checkbox"]:focus + label::before {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px; }
+.checkbox input[type="checkbox"]:checked + label::after {
+    font-family: 'FontAwesome';
+    content: "\f00c"; }
+.checkbox input[type="checkbox"]:disabled + label {
+    opacity: 0.65; }
+.checkbox input[type="checkbox"]:disabled + label::before {
+    background-color: #eeeeee;
+    cursor: not-allowed; }
+.checkbox.checkbox-circle label::before {
+    border-radius: 50%; }
+.checkbox.checkbox-inline {
+    margin-top: 0; }
+
+.checkbox-primary input[type="checkbox"]:checked + label::before {
+    background-color: #428bca;
+    border-color: #428bca; }
+.checkbox-primary input[type="checkbox"]:checked + label::after {
+    color: #fff; }
+
+.checkbox-danger input[type="checkbox"]:checked + label::before {
+    background-color: #d9534f;
+    border-color: #d9534f; }
+.checkbox-danger input[type="checkbox"]:checked + label::after {
+    color: #fff; }
+
+.checkbox-info input[type="checkbox"]:checked + label::before {
+    background-color: #5bc0de;
+    border-color: #5bc0de; }
+.checkbox-info input[type="checkbox"]:checked + label::after {
+    color: #fff; }
+
+.checkbox-warning input[type="checkbox"]:checked + label::before {
+    background-color: #f0ad4e;
+    border-color: #f0ad4e; }
+.checkbox-warning input[type="checkbox"]:checked + label::after {
+    color: #fff; }
+
+.checkbox-success input[type="checkbox"]:checked + label::before {
+    background-color: #5cb85c;
+    border-color: #5cb85c; }
+.checkbox-success input[type="checkbox"]:checked + label::after {
+    color: #fff; }
+
+.radio {
+    padding-left: 20px; }
+.radio label {
+    display: inline-block;
+    position: relative;
+    padding-left: 5px; }
+.radio label::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: 0;
+    margin-left: -20px;
+    border: 1px solid #cccccc;
+    border-radius: 50%;
+    background-color: #fff;
+    -webkit-transition: border 0.15s ease-in-out;
+    -o-transition: border 0.15s ease-in-out;
+    transition: border 0.15s ease-in-out; }
+.radio label::after {
+    display: inline-block;
+    position: absolute;
+    content: " ";
+    width: 11px;
+    height: 11px;
+    left: 3px;
+    top: 3px;
+    margin-left: -20px;
+    border-radius: 50%;
+    background-color: #555555;
+    -webkit-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    -o-transform: scale(0, 0);
+    transform: scale(0, 0);
+    -webkit-transition: -webkit-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+    -moz-transition: -moz-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+    -o-transition: -o-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+    transition: transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33); }
+.radio input[type="radio"] {
+    opacity: 0; }
+.radio input[type="radio"]:focus + label::before {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px; }
+.radio input[type="radio"]:checked + label::after {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1); }
+.radio input[type="radio"]:disabled + label {
+    opacity: 0.65; }
+.radio input[type="radio"]:disabled + label::before {
+    cursor: not-allowed; }
+.radio.radio-inline {
+    margin-top: 0; }
+
+.radio-primary input[type="radio"] + label::after {
+    background-color: #428bca; }
+.radio-primary input[type="radio"]:checked + label::before {
+    border-color: #428bca; }
+.radio-primary input[type="radio"]:checked + label::after {
+    background-color: #428bca; }
+
+.radio-danger input[type="radio"] + label::after {
+    background-color: #d9534f; }
+.radio-danger input[type="radio"]:checked + label::before {
+    border-color: #d9534f; }
+.radio-danger input[type="radio"]:checked + label::after {
+    background-color: #d9534f; }
+
+.radio-info input[type="radio"] + label::after {
+    background-color: #5bc0de; }
+.radio-info input[type="radio"]:checked + label::before {
+    border-color: #5bc0de; }
+.radio-info input[type="radio"]:checked + label::after {
+    background-color: #5bc0de; }
+
+.radio-warning input[type="radio"] + label::after {
+    background-color: #f0ad4e; }
+.radio-warning input[type="radio"]:checked + label::before {
+    border-color: #f0ad4e; }
+.radio-warning input[type="radio"]:checked + label::after {
+    background-color: #f0ad4e; }
+
+.radio-success input[type="radio"] + label::after {
+    background-color: #5cb85c; }
+.radio-success input[type="radio"]:checked + label::before {
+    border-color: #5cb85c; }
+.radio-success input[type="radio"]:checked + label::after {
+    background-color: #5cb85c; }
+
+.btn-login{
+    background: #409aff;
+    border: none;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 19px;
+}
+
+.btn-facebook{
+    background: #5b77b2;
+    border: none;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.btn-facebook i{
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.btn-forgot{
+    padding: 13px 0;
+}
+
+
+.btn-register{
+    background: #43b951;
+    border: none;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 19px;
+}
+
+.btn-register:hover {
+    background: #2f8239;
+}
+
+.sub-title{
+
+}
+.sub-title hr{
+    border-top: 1px solid #b1b1b1;
+}
+.sub-title span{
+    display: block;
+    background: #fff;
+    width: 100px;
+    margin: -30px auto 0 auto;
+    text-align: center;
+    color: #4f4f4f;
+    font-size: 14px;
+    font-style: italic;
+}
+
+@media only screen and (max-width: 992px) {
+    .container {
+        margin-top: 0;
+    }
+
+    .logo {
+        margin: 20px auto;
+    }
+
+
+
+    .banner {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 930px) {
+    .tab_container .head span {
+        font-size: 14px;
+    }
+    .tab_container .head .fa {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 776px) {
+   .footer .col-sm-6:last-child{
+       text-align: left;
+   }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+
+    .tab_container .head .fa {
+        font-size: 16px;
+    }
+
+    .tab_container {
+        width: 98%;
+    }
+}
+
+
+@media only screen and (max-width: 468px) {
+
+    .tab_container .head {
+        padding: 15px 0;
+    }
+
+    .logo {
+        width: 70%;
+    }
+
+    .logo img {
+        width: 100%;
+    }
+}
+
+
+
