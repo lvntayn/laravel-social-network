@@ -1,4 +1,4 @@
-## Laravel 5 - Simple Location-Based Social Network
+## Laravel 5 - Simple Location-Based Social Network 
 It's location-based social network developed by lvntayn, theoneremains and koniqwe using the Laravel PHP framework.
 
 Live - https://around.kim
@@ -10,8 +10,10 @@ Live - https://around.kim
 * php artisan key:generate to regenerate secure key
 * create new database and edit .env file for DB settings
 * php artisan migrate —seed
-* php artisan serve
 * edit .env file for APP configuration and Google API Configuration
+* storage, bootstrap/cache and public/cache directories should be writable
+* php artisan storage:link
+* php artisan serve
 
 
 ### Include
@@ -38,11 +40,11 @@ Live - https://around.kim
 * Hide your profile by sharing your location. Let only the people around you to have access to communicate with you
 * Find people around you at the same location, having same hobby and become a member of an automatically created hobby group
 
-### Pages
+### Pages 
 There are 7 pages. which are Home Page for Login and Sign Up,  TimeLine, Direct Messages and Profile you know.
-* Nearby page is for seeing people around you.
-* Groups are created automatically for people who share the same hobby.  You can see group posts in groups page if you added that specific hobby.
-* Following & Followers page shows the list of followers and people you are following.
+* Nearby page is for seeing people around you.  
+* Groups are created automatically for people who share the same hobby.  You can see group posts in groups page if you added that specific hobby.  
+* Following & Followers page shows the list of followers and people you are following.  
 
 ### Packages Included
 * alexpechkarev/google-maps
@@ -57,10 +59,10 @@ There are 7 pages. which are Home Page for Login and Sign Up,  TimeLine, Direct 
 
 ### Authors
 **lvntayn**
- - https://github.com/lvntayn
+- https://github.com/lvntayn
 
 **theoneremains**
- - https://github.com/theoneremains
+- https://github.com/theoneremains
 
 **koniqwe**
- - https://github.com/koniqwe
+- https://github.com/koniqwe

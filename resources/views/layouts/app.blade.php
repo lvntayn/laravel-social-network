@@ -130,7 +130,7 @@
 <script src="{{ asset('plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js') }}"></script>
 <script src="{{ asset('plugins/bootstrap3-dialog/dist/js/bootstrap-dialog.min.js') }}"></script>
 <script src="{{ asset('plugins/select2/dist/js/select2.full.min.js') }}"></script>
-<script src="//maps.google.com/maps/api/js"></script>
+<script src="//maps.google.com/maps/api/js?key=<?=config('googlemaps.key')?>"></script>
 <script src="{{ asset('plugins/gmaps/gmaps.min.js') }}"></script>
 <script src="{{ asset('js/around.js') }}"></script>
 <script src="{{ asset('js/wall.js') }}"></script>
