@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+	
     <div class="h-20"></div>
     <div class="container">
         <div class="row">
@@ -13,26 +14,23 @@
                     <i class="fa fa-map-marker"></i> Find people nearby
                 </div>
 
-                <div id="map-render" style="width: 100%; height: 500px">
+                <div id="map-render" style="width: 100%; max-height: 500px">
 
                 </div>
-
-                <h5 class="text-muted">{{ $user->location->address }}</h5>
+                <h5 class="text-muted">{{ ($user->location ? $user->location->address : null) }}</h5>
 
                 <div class="content-page-blue-title">
-                    Found {{ $nearby->count() }} people in 50 km range!
+                    Found {{ ($nearby ? $nearby->count() : 0) }} people in 50 km range!
                 </div>
-
-                @if($nearby->count() == 0)
+				
+                @if($nearby == false || $nearby->count() == 0)
                     <div class="alert-message alert-message-danger">
                         <h4>People are not found.</h4>
                     </div>
                 @else
                     <div class="row">
-
+					
                         @foreach($nearby as $location)
-
-
                             <div class="col-sm-6 col-md-4">
                                 <div class="card-container">
                                     <div class="card">
@@ -74,6 +72,7 @@
 
 @section('footer')
     <script type="text/javascript">
+    	@if($user->location != null)
         var map = new GMaps({
             el: '#map-render',
             lat: {{ $user->location->latitud }},
@@ -89,6 +88,8 @@
                 content: 'You'
             }
         });
+        @endif
+        @if($nearby != false)
         @foreach($nearby as $location)
             map.addMarker({
                 lat: {{ $location->latitud }},
@@ -107,5 +108,6 @@
                 }
             });
         @endforeach
+        @endif
     </script>
 @endsection
